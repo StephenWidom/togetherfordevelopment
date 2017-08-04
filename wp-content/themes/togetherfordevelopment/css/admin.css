@@ -1,0 +1,12 @@
+#tinymce {
+    margin: 8px;
+}
+
+.mceContentBody {
+    height: auto!important;
+}
+
+.monospace .acf-input textarea {
+    font-family: monospace;
+}
+
