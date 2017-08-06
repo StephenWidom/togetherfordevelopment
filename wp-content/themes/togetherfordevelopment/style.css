@@ -7,6 +7,18 @@ Text Domain: wordpress
 */
 
 
+/*
+COLOR SCHEME
+Blue: #0064A6
+Teal: #009B90
+Brown: #983E09
+Purple: #741669
+Red: #AD1644
+Orange: #DE6328
+Gray: #717073
+*/
+
+
 /* WORDPRESS STANDARD */
 
 .alignnone {
@@ -139,7 +151,7 @@ html {
 
 body {
     position: relative;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
 .container:before,
@@ -169,6 +181,83 @@ img {
     height: auto;
 }
 
+section {
+    padding: 45px 0;
+}
+
+.content p,
+.content ul,
+.content ol,
+.content table {
+    margin-bottom: 20px;
+}
+
+.content ol,
+.content ul {
+    margin-left: 40px;
+}
+
+.content> *:last-child {
+    margin-bottom: 0;
+}
+
+
+/* HEADER / NAV */
+
+header {
+    background: #fff;
+    padding: 10px 0 0;
+    border-bottom: 1px solid #000;
+}
+
+.logo {
+    float: left;
+}
+
+.logo img {
+    width: 200px;
+}
+
+nav ul {
+    list-style: none;
+    font-size: 0;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline-block;
+    font-size: 12pt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 10pt;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: #717073;
+    transition: all 0.2s ease;
+}
+
+nav ul li:after {
+    display: block;
+    width: 0;
+    height: 5px;
+    content: '';
+    background: #0064A6;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #0064A6;
+}
+
+nav ul li:hover:after {
+    width: 100%;
+}
+
 
 /* MEDIA QUERIES */
 
@@ -195,4 +284,3 @@ img {
         width: 300px;
     }
 }
-

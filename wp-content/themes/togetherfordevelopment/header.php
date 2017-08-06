@@ -6,10 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
     <?php wp_head(); ?>
 </head>
-<body>
-<header>
-    <div class="container">
-        <h1><a href="<?php echo site_url(); ?>">Together for Development</a></h1>
-    </div>
-</header>    
+<body <?php body_class(); ?>>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="<?php echo site_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/uwc_logo_resized.png"/></a>
+            </div>
+            <nav>
+                <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'main-nav-menu',
+                        'container'      => ''
+                    ));
+                ?>
+            </nav>
+        </div>
+    </header>
 
