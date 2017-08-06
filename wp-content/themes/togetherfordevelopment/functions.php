@@ -86,7 +86,7 @@ if (!function_exists('tfd_scripts')){ function tfd_scripts(){
 //** === === === === === === ===>>> LOAD FOOTER CSS
 if (!function_exists('tfd_add_footer_styles')){ function tfd_add_footer_styles(){
 
-    // wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Lato|Raleway:300,400,500,600,700|Oswald:300,400,700|Open+Sans:300,400,600,700|Droid+Serif:400,400i,700,700i|Roboto+Slab:400,700|Oswald:400,500,600,700', null, null);
+    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700', null, null);
     // wp_enqueue_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', null, null);
 
 }} add_action('get_footer', 'tfd_add_footer_styles');
