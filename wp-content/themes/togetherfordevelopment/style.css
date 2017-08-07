@@ -206,12 +206,12 @@ section {
 
 header {
     background: #fff;
-    padding: 10px 0 0;
     border-bottom: 1px solid #000;
 }
 
 .logo {
     float: left;
+    padding-top: 10px;
 }
 
 .logo img {
@@ -235,10 +235,15 @@ nav ul li {
 
 nav ul li a {
     display: block;
-    padding: 15px 30px;
+    padding: 25px 30px 15px;
     text-decoration: none;
     color: #717073;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
+}
+
+nav ul li:last-child a {
+    background: #AD1644;
+    color: #fff;
 }
 
 nav ul li:after {
@@ -247,15 +252,29 @@ nav ul li:after {
     height: 5px;
     content: '';
     background: #0064A6;
-    transition: width 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+nav ul li:last-child:after {
+    width: 100%;
+    background: #AD1644;
 }
 
 nav ul li a:hover {
     color: #0064A6;
 }
 
+nav ul li:last-child a:hover {
+    background: #009B90;
+    color: #fff;
+}
+
 nav ul li:hover:after {
     width: 100%;
+}
+
+nav ul li:last-child:hover:after {
+    background: #009B90;
 }
 
 
