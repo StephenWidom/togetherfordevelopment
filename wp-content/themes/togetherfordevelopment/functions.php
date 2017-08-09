@@ -16,7 +16,7 @@ if (!function_exists('tfd_setup')){ function tfd_setup(){
 	add_theme_support('post-thumbnails');
 
 	// ADD CUSTOM IMAGE SIZES
-	add_image_size('max-width', 600, 9999);
+	add_image_size('page', 1120, 400, true);
 
 	// CUSTOM POST THUMBNAIL SIZE
 	// set_post_thumbnail_size(200, 140, true);
