@@ -72,6 +72,10 @@ if (!function_exists('tfd_scripts')){ function tfd_scripts(){
 	// wp_register_script('fancybox', get_template_directory_uri().'/js/jquery.fancybox.js', array('jquery'), null, true);
 	// wp_enqueue_script('fancybox');
 
+    // LOAD CENTERR
+    wp_register_script('centerr', get_template_directory_uri() . '/js/jquery.centerr-min.js', null, null, true);
+    wp_enqueue_script('centerr');
+
     // LOAD SCROLLTO
     // wp_register_script('scrollTo', get_template_directory_uri() . '/js/jquery.scrollTo.js', null, null, true);
     // wp_enqueue_script('scrollTo');
