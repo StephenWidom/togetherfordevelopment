@@ -20,6 +20,17 @@ var slider = [];
         <?php
             endif;
         ?>
+<div class="home-primary">
+        <?php
+            if (function_exists('get_field') && get_field('slider_text')):
+        ?>
+    <div class="container">
+        <h1><?php the_field('slider_text'); ?></h1>
+    </div>
+        <?php
+            endif;
+        ?>
+</div>
 <section>
     <div class="container content">
         <?php the_content(); ?>
