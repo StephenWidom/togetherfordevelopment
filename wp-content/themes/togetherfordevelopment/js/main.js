@@ -1,36 +1,76 @@
-jQuery(document).ready(function($){
+/*
+ * MAIN SITE JAVASCRIPTS
+ *
+ * To be executed on every page
+ */
 
-    getNextDrawing();
+jQuery(document).ready(function($) {
 
-    function getNextDrawing() {
 
-        // Grab the link to the previous drawing
-        var $nextLink = $('a[rel="prev"]'),
-            $currentDrawing;
+    /*
+     * FANCYBOX / LIGHTBOX / POPUP
+     *
+     * Open designated content in a lightbox
+     */
 
-        // If there is a link to a previous drawing
-        if ($nextLink.length > 0) {
+    // Assign designated class to links to jpgs
 
-            // Grab the URL of the previous drawing
-            var nextDrawingURL = $nextLink.attr('href');
+    $imageLinks = $('a[href$=".jpg"], a[href$=".png"], a[href$=".gif"]');
+    
+    $imageLinks.each(function() {
 
-            // Load the previous drawing into a new article element
-            $('<article>').load(nextDrawingURL + ' article>div', function() {
+        var imageLink = $(this).attr('href');
+        
+        // Only target images with a caption
+        if ($(this).next().hasClass('wp-caption-text')) {
 
-                // Remove the previous drawing link
-                $nextLink.remove();
+            var $caption = $(this).next(),
+                captionText = $caption.text().trim();
 
-                // Add the new (previous) drawing
-                $('.content').append($(this));
-
-                // Attach getNextDrawing to this new drawing
-                $currentDrawing = $(this).scrollTo(getNextDrawing).prev();
-
-            });
+            $caption.html($caption.html() + '<a href="' + imageLink + '" class="fancybox" title="' + $(this).next().text().trim()  + '"><i class="fa fa-plus-square-o"></i></a>');
+           $(this).attr('title', captionText); 
 
         }
 
-    }
+    });
+
+    $imageLinks.addClass('fancybox');
+
+    // Apply to all links with a class of "fancybox"
+    $('.fancybox').fancybox({
+        padding: 0
+    });
+
+
+    /*
+     * EXTERNAL LINKS
+     *
+     * Open external links in a new tab by default
+     */
+
+    $('a').filter(function() {
+        return this.hostname && this.hostname !== location.hostname;
+    }).attr('target', '_blank');
+
+    // Remove above behavior from header links
+    // $('nav a').removeAttr('target');
+
+    // Open all links to PDFs in a new tab
+    $('a[href$=".pdf"]').attr('target', '_blank');
+
+
+    /*
+     * SLICKNAV / MOBILE NAV
+     *
+     * Mobile nav menu instance, and some changes to
+     * "Products" link, because it's difficult to show
+     * all logos on mobile
+     */
+
+    //$('header nav>ul').slicknav({
+        //appendTo: 'header>div.container'
+    //});
+
 
 });
 

@@ -56,7 +56,7 @@ if (!function_exists('tfd_setup')){ function tfd_setup(){
 if (!function_exists('tfd_scripts')){ function tfd_scripts(){
 
 	// LOAD CSS
-	// wp_enqueue_style('fancybox', get_template_directory_uri().'/css/jquery.fancybox.css', null, null);
+	wp_enqueue_style('fancybox', get_template_directory_uri().'/css/jquery.fancybox.css', null, null);
 	wp_enqueue_style('style', get_stylesheet_uri(), null, null);
 
 	// LOAD JQUERY - IN FOOTER
@@ -69,8 +69,8 @@ if (!function_exists('tfd_scripts')){ function tfd_scripts(){
 	wp_enqueue_script('backstretch');
 
 	// LOAD FANCYBOX
-	// wp_register_script('fancybox', get_template_directory_uri().'/js/jquery.fancybox.js', array('jquery'), null, true);
-	// wp_enqueue_script('fancybox');
+	wp_register_script('fancybox', get_template_directory_uri().'/js/jquery.fancybox.js', array('jquery'), null, true);
+	wp_enqueue_script('fancybox');
 
     // LOAD CENTERR
     wp_register_script('centerr', get_template_directory_uri() . '/js/jquery.centerr-min.js', null, null, true);
@@ -91,7 +91,7 @@ if (!function_exists('tfd_scripts')){ function tfd_scripts(){
 if (!function_exists('tfd_add_footer_styles')){ function tfd_add_footer_styles(){
 
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Roboto+Slab:400,700', null, null);
-    // wp_enqueue_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', null, null);
+    wp_enqueue_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', null, null);
 
 }} add_action('get_footer', 'tfd_add_footer_styles');
 
