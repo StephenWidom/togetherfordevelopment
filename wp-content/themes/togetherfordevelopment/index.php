@@ -4,7 +4,6 @@
         while (have_posts()):
             the_post();
             get_template_part('inc/title');
-            get_template_part('inc/featured-image');
 ?>
 <section>
     <div class="container content">
