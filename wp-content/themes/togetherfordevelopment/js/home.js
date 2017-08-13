@@ -4,7 +4,6 @@
  * To be executed on front-page.php, i.e.
  * http://togetherfordevelopment.com
  */
-
 jQuery(document).ready(function($) {
 
     /**
