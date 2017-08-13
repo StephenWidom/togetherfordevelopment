@@ -361,6 +361,51 @@ h1.title,
     margin: 0 0 30px;
 }
 
+
+/* TEAM */
+
+.leadership {
+    border-top: 3px solid #122c54;
+    padding: 10px 0;
+    margin-top: 60px;
+}
+
+.leadership h2 {
+    margin: 0 0 30px;
+}
+
+.member {
+    padding-left: 180px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.member .name {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.member .name strong:after {
+    content: ",";
+    font-weight: 400;
+}
+
+.member img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 155px;
+}
+
+.member-content {
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 1120px) {
