@@ -16,7 +16,7 @@
             while (have_rows('sections')):
                 the_row();
     ?>
-        <div class="content-section">
+        <div class="content-section cf">
         <?php
                 if (get_sub_field('section_title')):
         ?>
