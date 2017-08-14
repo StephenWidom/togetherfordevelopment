@@ -410,6 +410,40 @@ h1.title,
 }
 
 
+/* FAQS */
+
+.faq {
+    margin: 40px 0 0;
+}
+
+.content .faq:first-child {
+    margin-top: 0;
+}
+
+dd {
+    background: #DE6328;
+    color: #fff;
+    padding: 5px 15px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 14pt;
+    cursor: pointer;
+}
+
+dd:after {
+    content: '(Click to expand)';
+    font-style: italic;
+    float: right;
+    font-size: 10pt;
+    position: relative;
+    top: 3px;
+}
+
+dt {
+    padding: 15px;
+    margin: 0 0 10px;
+    display: none;
+}
+
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 1120px) {
