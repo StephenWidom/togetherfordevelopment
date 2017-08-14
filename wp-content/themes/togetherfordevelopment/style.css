@@ -245,7 +245,7 @@ nav ul li {
 
 nav ul li a {
     display: block;
-    padding: 25px 30px 15px;
+    padding: 25px 25px 15px;
     text-decoration: none;
     color: #717073;
     transition: all 0.3s ease;
@@ -378,11 +378,15 @@ h1.title,
     padding-left: 180px;
     position: relative;
     margin-bottom: 40px;
+    min-height: 155px;
 }
 
 .member .name {
     font-size: 21px;
     margin-bottom: 12px;
+    background: #AD1644;
+    color: #fff;
+    padding: 5px 15px;
 }
 
 .member .name strong:after {
