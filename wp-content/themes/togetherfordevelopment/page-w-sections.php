@@ -36,7 +36,7 @@
         endif;
     ?>
     </div>
-<section>
+</section>
 <?php
         endwhile;
     endif;

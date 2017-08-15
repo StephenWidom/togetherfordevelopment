@@ -9,7 +9,7 @@
     <div class="container content">
         <?php the_content(); ?>
     </div>
-<section>
+</section>
 <?php
         endwhile;
     endif;
