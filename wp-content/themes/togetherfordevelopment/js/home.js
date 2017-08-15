@@ -31,7 +31,7 @@ jQuery(document).ready(function($) {
      */
     $('#arrow').on("click", function() {
         $('html, body').animate({
-            scrollTop: viewportHeight - $('header').outerHeight()
+            scrollTop: viewportHeight
         }, 1000);
     });
 
