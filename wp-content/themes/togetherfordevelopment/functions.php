@@ -11,6 +11,7 @@ if (!function_exists('tfd_setup')){ function tfd_setup(){
 
 	// REGISTER NAV MENU
 	register_nav_menu('main-nav-menu', __('Main Nav Menu'));
+	register_nav_menu('footer-nav', __('Footer Navigation'));
 
 	// ADD FEATURED IMAGE SUPPORT
 	add_theme_support('post-thumbnails');
