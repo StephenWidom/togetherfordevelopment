@@ -45,7 +45,7 @@ jQuery(document).ready(function($) {
         viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0),
         $home = $('.home-primary'),
         $homecontent = $home.find('.container'),
-        $quicklinks = $('.quicklinks');
+        $header = $('header');
 
     // Fade in homepage heading
     $home.delay(1200).animate({
@@ -55,10 +55,13 @@ jQuery(document).ready(function($) {
     // Center homepage heading
     $(window).on("load resize", function() {
         viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-        $home.css('height', viewportHeight);
+        $home.css('height', viewportHeight - $header.outerHeight());
         $homecontent.centerr({
             mobile: 0
         });
+
+        $('.quote').samesizr();
+
     });
 
 });

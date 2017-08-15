@@ -31,12 +31,32 @@ var slider = [];
             endif;
         ?>
 </div>
-<section>
+<section class="home-secondary">
     <div class="container content">
         <?php the_content(); ?>
     </div>
 </section>
 <?php
+    if (function_exists('get_field') && $quotes = get_field('quotes')):
+?>
+<section class="quotes cf">
+<?php
+        $no_of_quotes = count($quotes);
+        $quote_width = floor(100 / $no_of_quotes);
+
+        foreach ($quotes as $quote):
+?>
+    <div class="quote w-<?php echo $quote_width; ?>">
+        <span><?php echo $quote['quote']; ?></span>
+        <span class="author">&ndash; <?php echo $quote['author']; ?></span>
+    </div>
+<?php
+        endforeach;
+?>
+</section>
+<?php
+    endif;
+
         endwhile;
     endif;
     get_footer();
