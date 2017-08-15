@@ -412,11 +412,13 @@ h1.title,
 
 /* FAQS */
 
-.faq {
+.faq,
+.gallery {
     margin: 40px 0 0;
 }
 
-.content .faq:first-child {
+.content .faq:first-child,
+.content .gallery:first-child {
     margin-top: 0;
 }
 
@@ -443,6 +445,34 @@ dt {
     margin: 0 0 10px;
     display: none;
 }
+
+
+/* PHOTOS / GALLERY */
+
+.gallery {
+    font-size: 0;
+}
+
+.gallery li {
+    display: inline-block;
+    width: 15%;
+    text-align: center;
+    margin: 0 2% 2% 0;
+}
+
+.gallery li:nth-child(6n) {
+    margin-right: 0;
+}
+
+.gallery li a {
+    display: block;
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+}
+
 
 /* MEDIA QUERIES */
 

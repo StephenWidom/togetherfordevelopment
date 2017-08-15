@@ -91,6 +91,7 @@ if (!function_exists('tfd_scripts')){ function tfd_scripts(){
 if (!function_exists('tfd_add_footer_styles')){ function tfd_add_footer_styles(){
 
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Roboto+Slab:400,700', null, null);
+    wp_enqueue_style('hover', get_template_directory_uri().'/css/hover-min.css', null, null);
     wp_enqueue_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', null, null);
 
 }} add_action('get_footer', 'tfd_add_footer_styles');
