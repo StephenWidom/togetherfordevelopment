@@ -468,6 +468,7 @@ h1.title,
 
 dd {
     background: #DE6328;
+    border-bottom: 1px solid #fff;
     color: #fff;
     padding: 5px 15px;
     font-family: 'Roboto Slab', serif;
