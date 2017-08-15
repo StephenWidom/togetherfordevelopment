@@ -6,7 +6,7 @@
                 'container'      => ''
             ));
         ?>
-            <span class="designer">Website design by <a href="http://stephenwidom.com/" target="_blank">Stephen Widom</a></span>
+            <span class="designer">Website by <a href="http://stephenwidom.com/" target="_blank">Stephen Widom</a></span>
     </div>
 </footer>
 <?php wp_footer(); ?>
