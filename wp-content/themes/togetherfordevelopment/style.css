@@ -209,6 +209,11 @@ section {
     margin-bottom: 0;
 }
 
+hr {
+    height: 1px;
+    background: #0064A6;
+    margin: 20px auto;
+}
 
 /* TYPOGRAPHY */
 
