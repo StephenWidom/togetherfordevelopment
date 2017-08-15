@@ -473,6 +473,11 @@ dd {
     font-family: 'Roboto Slab', serif;
     font-size: 14pt;
     cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+dd:hover {
+    background: #AD1644;
 }
 
 dd:not(:first-child):after {
