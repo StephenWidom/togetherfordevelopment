@@ -468,11 +468,17 @@ h1.title,
 
 dd {
     background: #DE6328;
+    border-bottom: 1px solid #fff;
     color: #fff;
     padding: 5px 15px;
     font-family: 'Roboto Slab', serif;
     font-size: 14pt;
     cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+dd:hover {
+    background: #AD1644;
 }
 
 dd:not(:first-child):after {
