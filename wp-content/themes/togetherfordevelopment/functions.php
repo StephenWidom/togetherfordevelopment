@@ -76,6 +76,10 @@ if (!function_exists('tfd_scripts')){ function tfd_scripts(){
     // LOAD CENTERR
     wp_register_script('centerr', get_template_directory_uri() . '/js/jquery.centerr-min.js', null, null, true);
     wp_enqueue_script('centerr');
+    
+    // LOAD SAMESIZR
+    wp_register_script('samesizr', get_template_directory_uri() . '/js/jquery.samesizr-min.js', null, null, true);
+    wp_enqueue_script('samesizr');
 
     // LOAD SCROLLTO
     // wp_register_script('scrollTo', get_template_directory_uri() . '/js/jquery.scrollTo.js', null, null, true);
