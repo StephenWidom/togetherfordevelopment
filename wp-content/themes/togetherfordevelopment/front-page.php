@@ -30,6 +30,7 @@ var slider = [];
         <?php
             endif;
         ?>
+    <span id="arrow"><i class="fa fa-chevron-down"></i></span>
 </div>
 <section class="home-secondary">
     <div class="container content">
