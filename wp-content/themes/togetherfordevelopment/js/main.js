@@ -76,21 +76,22 @@ jQuery(document).ready(function($) {
      * Adjust element placement for mobile layout
      */
 
-    var mobileLayout = false;
+    var mobileLayout = false,
+        mobileCutoff = 960;
 
     $(window).on("load resize", function() {
         
         var viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
         // Mobile layout
-        if (viewportWidth <= 960 && !mobileLayout) {
+        if (viewportWidth <= mobileCutoff && !mobileLayout) {
 
             $('.soc').appendTo('footer .container');
 
             mobileLayout = true;
             
         // Put it back to normal for desktops
-        } else if (viewportWidth > 960 && mobileLayout) {
+        } else if (viewportWidth > mobileCutoff && mobileLayout) {
 
             $('.soc').prependTo('footer .container');
 
