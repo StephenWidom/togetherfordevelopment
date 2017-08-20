@@ -672,6 +672,15 @@ ul.gallery {
     .soc{
         margin-right: 20px;
     }
+    footer {
+        padding-bottom: 10px;
+    }
+    footer ul {
+        margin: 0 0 20px;
+    }
+    footer ul li {
+        margin-bottom: 5px;
+    }
     footer ul li:not(:last-child) {
         margin-right: 7px;
     }
@@ -698,9 +707,6 @@ ul.gallery {
     .quote {
         font-size: 12pt;
         padding: 40px 20px;
-    }
-    footer ul {
-        margin: 0 0 25px;
     }
     footer ul li:not(:last-child) {
         margin-right: 2px;

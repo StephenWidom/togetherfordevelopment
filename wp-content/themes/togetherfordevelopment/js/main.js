@@ -83,14 +83,14 @@ jQuery(document).ready(function($) {
         var viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
         // Mobile layout
-        if (viewportWidth <= 767 && !mobileLayout) {
+        if (viewportWidth <= 960 && !mobileLayout) {
 
             $('.soc').appendTo('footer .container');
 
             mobileLayout = true;
             
         // Put it back to normal for desktops
-        } else if (viewportWidth > 767 && mobileLayout) {
+        } else if (viewportWidth > 960 && mobileLayout) {
 
             $('.soc').prependTo('footer .container');
 
