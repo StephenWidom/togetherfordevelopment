@@ -225,8 +225,14 @@ h3 {
 
 /* HEADER / NAV */
 
+.slicknav_menu {
+    display: none;
+}
+
 header {
     background: #fff;
+    position: relative;
+    z-index: 9;
 }
 
 .logo {
@@ -616,8 +622,9 @@ dt {
 
 /* PHOTOS / GALLERY */
 
-.gallery {
+ul.gallery {
     font-size: 0;
+    margin: 0;
 }
 
 .gallery li {
@@ -647,11 +654,36 @@ dt {
     .container {
         width: 960px;
     }
+    nav ul li a {
+        padding: 25px 15px 15px;
 }
 
 @media screen and (max-width: 960px) {
     .container {
         width: 767px;
+    }
+    .slicknav_menu {
+        display: block;
+    }
+    header nav {
+        display: none;
+    }
+    .soc{
+        margin-right: 20px;
+    }
+    footer ul li:not(:last-child) {
+        margin-right: 7px;
+    }
+    footer ul li:not(:last-child):after {
+        padding-left: 7px;
+    }
+    .gallery li,
+    .gallery li:nth-child(6n) {
+        width: 24%;
+        margin: 0 1% 1% 0;
+    }
+    .gallery li:nth-child(4n) {
+        margin-right: 0;
     }
 }
 
@@ -659,10 +691,77 @@ dt {
     .container {
         width: 480px;
     }
+    .home-primary h1 {
+        font-size: 18pt;
+    }
+    .quote {
+        font-size: 12pt;
+        padding: 40px 20px;
+    }
+    footer ul {
+        margin: 0 0 25px;
+    }
+    footer ul li:not(:last-child) {
+        margin-right: 2px;
+    }
+    footer ul li:not(:last-child):after {
+        padding-right: 2px;
+    }
+    .member {
+        padding: 0;
+    }
+    .member img {
+        display: block;
+        position: static;
+        float: left;
+        margin: 0 10px 0 0;
+    }
+    .gallery li,
+    .gallery li:nth-child(6n),
+    .gallery li:nth-child(4n) {
+        width: 32%;
+        margin: 0 2% 2% 0;
+    }
+    .gallery li:nth-child(3n) {
+        margin-right: 0;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
     .container {
         width: 300px;
     }
+    .home-primary h1 {
+        font-size: 16pt;
+    }
+    .quote {
+        width: 100%;
+    }
+    footer ul {
+        margin: 0;
+    }
+    footer ul li {
+        display: block;
+        margin: 0 0 5px;
+    }
+    footer ul li:not(:last-child):after {
+        display: none;
+    }
+    .member img {
+        width: 100%;
+        margin: 0 auto 25px;
+        float: none;
+    }
+    .gallery li,
+    .gallery li:nth-child(6n),
+    .gallery li:nth-child(4n),
+    .gallery li:nth-child(3n) {
+        width: 49%;
+        margin: 0 2% 2% 0;
+    }
+    .gallery li:nth-child(2n) {
+        margin-right: 0;
+    }
+
 }

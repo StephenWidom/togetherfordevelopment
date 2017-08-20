@@ -14,9 +14,7 @@ jQuery(document).ready(function($) {
      */
 
     // Assign designated class to links to jpgs
-
     $imageLinks = $('a[href$=".jpg"], a[href$=".png"], a[href$=".gif"]');
-    
     $imageLinks.each(function() {
 
         var imageLink = $(this).attr('href');
@@ -67,9 +65,41 @@ jQuery(document).ready(function($) {
      * all logos on mobile
      */
 
-    //$('header nav>ul').slicknav({
-        //appendTo: 'header>div.container'
-    //});
+    $('header nav>ul').slicknav({
+        appendTo: 'header>div.container'
+    });
+
+
+    /*
+     * MOBILE TWEAKS
+     *
+     * Adjust element placement for mobile layout
+     */
+
+    var mobileLayout = false;
+
+    $(window).on("load resize", function() {
+        
+        var viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+
+        // Mobile layout
+        if (viewportWidth <= 767 && !mobileLayout) {
+
+            $('.soc').appendTo('footer .container');
+
+            mobileLayout = true;
+            
+        // Put it back to normal for desktops
+        } else if (viewportWidth > 767 && mobileLayout) {
+
+            $('.soc').prependTo('footer .container');
+
+            mobileLayout = false;
+
+        }
+
+
+    });
 
 
 });
