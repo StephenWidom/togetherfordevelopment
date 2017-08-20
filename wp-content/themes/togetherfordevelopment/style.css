@@ -745,16 +745,6 @@ ul.gallery {
     .quote {
         width: 100%;
     }
-    footer ul {
-        margin: 0;
-    }
-    footer ul li {
-        display: block;
-        margin: 0 0 5px;
-    }
-    footer ul li:not(:last-child):after {
-        display: none;
-    }
     .member img {
         width: 100%;
         margin: 0 auto 25px;
