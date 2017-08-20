@@ -25,9 +25,9 @@ get_header();
 					the_row();
 					$image = get_sub_field('image');
 			?>
-			<div class="member">
-                    <a title="<?php echo the_sub_field('name'); ?>" href="<?php echo $image['sizes']['large']; ?>"><img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>"></a>
+			<div class="member cf">
 				    <p class="name"><strong><?php the_sub_field('name'); ?></strong> <?php the_sub_field('title'); ?></p>
+                    <a title="<?php echo the_sub_field('name'); ?>" href="<?php echo $image['sizes']['large']; ?>"><img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>"></a>
                     <div class="member-bio">
 				        <?php the_sub_field('bio'); ?>
                     </div>

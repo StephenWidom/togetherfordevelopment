@@ -60,7 +60,9 @@ jQuery(document).ready(function($) {
             mobile: 0
         });
 
-        $('.quote').samesizr();
+        $('.quote').samesizr({
+            mobile: 480
+        });
 
     });
 
