@@ -352,6 +352,9 @@ footer a:hover {
     float: right;
 }
 
+#donate {
+    display: none;
+}
 
 /* FRONT PAGE / HOME PAGE */
 
