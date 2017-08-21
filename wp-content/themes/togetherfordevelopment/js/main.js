@@ -103,5 +103,20 @@ jQuery(document).ready(function($) {
     });
 
 
+    /*
+     * PAYPAL DONATE LINK / FORM
+     *
+     * Submit the PayPal form when donate link is clicked
+     */
+
+    var $donateLink = $('a[href="#donate"]'),
+        $donateForm = $('#donate');
+
+    $donateLink.on("click", function(e) {
+        e.preventDefault();
+        $donateForm.submit();
+    });
+
+
 });
 
