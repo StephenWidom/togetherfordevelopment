@@ -10,7 +10,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <a href="<?php echo site_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/uwc_logo_resized.png"/></a>
+                <a href="<?php echo site_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/uwc-tfd-logo.png"/></a>
             </div>
             <nav>
                 <?php

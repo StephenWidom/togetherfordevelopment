@@ -237,11 +237,11 @@ header {
 
 .logo {
     float: left;
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 .logo img {
-    width: 200px;
+    width: 220px;
 }
 
 nav ul {
@@ -772,5 +772,12 @@ ul.gallery {
         display: block;
         font-style: normal;
     }
+    .logo {
+        padding-top: 10px;
+    }
+    .logo img {
+        width: 200px;
+    }
+
 
 }
