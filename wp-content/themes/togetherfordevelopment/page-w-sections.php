@@ -19,7 +19,10 @@
         <div class="content-section cf">
         <?php
                 if (get_sub_field('section_title')):
+                    $anchor = explode(' ', get_sub_field('section_title'));
+                    $anchor = strtolower($anchor[0]);
         ?>
+            <a name="<?php echo $anchor; ?>"></a>
             <h3 class="section-title"><?php the_sub_field('section_title'); ?></h3>
         <?php
                 endif;
