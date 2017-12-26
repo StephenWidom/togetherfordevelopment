@@ -20,7 +20,7 @@ if (!function_exists('tfd_setup')){ function tfd_setup(){
 	add_image_size('page', 1120, 400, true);
 
 	// CUSTOM POST THUMBNAIL SIZE
-	// set_post_thumbnail_size(200, 140, true);
+	set_post_thumbnail_size(300, 300, true);
 
 	// CREATE ACF OPTIONS PAGE
 	if (function_exists('acf_add_options_page')){
@@ -105,6 +105,28 @@ if (!function_exists('tfd_add_footer_styles')){ function tfd_add_footer_styles()
     wp_enqueue_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', null, null);
 
 }} add_action('get_footer', 'tfd_add_footer_styles');
+
+
+//** === === === === === === ===>>> ADD CSS CLASS(ES) TO EXCERPTS
+if (!function_exists('add_class_to_excerpt')){ function add_class_to_excerpt($excerpt){
+    return str_replace('<p', '<p class="excerpt"', $excerpt);
+}} add_filter("the_excerpt", "add_class_to_excerpt");
+
+
+//** === === === === === === ===>>> CUSTOM EXCERPT LENGTH
+function custom_excerpt_length($length){
+	return 29;
+}
+add_filter('excerpt_length', 'custom_excerpt_length', 999);
+
+
+//** === === === === === === ===>>> CUSTOM READ MORE BUTTON
+function new_excerpt_more($more){
+    global $post;
+    return '...';
+	// return '<a class="moretag" href="'.get_permalink($post->ID).'">... Read more</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
 
 //** === === === === === === ===>>> PAGE TITLES SANS SEO PLUGIN
