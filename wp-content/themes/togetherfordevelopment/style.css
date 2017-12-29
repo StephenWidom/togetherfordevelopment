@@ -205,6 +205,12 @@ section {
     margin-left: 40px;
 }
 
+.content li {
+    position: relative;
+    left: 1em;
+    padding-right: 1em;
+}
+
 .content> *:last-child {
     margin-bottom: 0;
 }
