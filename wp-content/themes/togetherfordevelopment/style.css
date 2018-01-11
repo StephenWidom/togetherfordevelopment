@@ -598,7 +598,7 @@ h1.title,
     margin-top: 0;
 }
 
-dd {
+.faq dd {
     background: #DE6328;
     border-bottom: 1px solid #fff;
     color: #fff;
@@ -610,11 +610,11 @@ dd {
     position: relative;
 }
 
-dd:hover {
+.faq dd:hover {
     background: #AD1644;
 }
 
-dd:not(:first-child):after {
+.faq dd:not(:first-child):after {
     content: '(Click to expand)';
     font-style: italic;
     font-size: 10pt;
@@ -623,7 +623,7 @@ dd:not(:first-child):after {
     right: 15px;
 }
 
-dt {
+.faq dt {
     padding: 15px;
     margin: 0 0 10px;
     display: none;
