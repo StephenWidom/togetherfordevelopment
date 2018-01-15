@@ -13,6 +13,11 @@ jQuery(document).ready(function($) {
      * Open designated content in a lightbox
      */
 
+    $('.gallery').each(function() {
+        var id = $(this).attr('id');
+        $(this).find('dt>a').attr('rel', id);
+    });
+
     // Assign designated class to links to jpgs
     $imageLinks = $('a[href$=".jpg"], a[href$=".png"], a[href$=".gif"]');
     $imageLinks.each(function() {
