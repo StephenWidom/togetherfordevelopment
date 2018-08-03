@@ -632,6 +632,11 @@ h1.title,
 
 /* PHOTOS / GALLERY */
 
+.gallery-container:not(:last-child) {
+    border-bottom: 1px solid #999;
+    margin-bottom: 40px;
+}
+
 ul.gallery {
     font-size: 0;
     margin: 0;

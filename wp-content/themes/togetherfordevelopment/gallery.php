@@ -11,18 +11,36 @@ Template Name: Gallery
     <?php
         the_content();
 
-        if (function_exists('get_field') && $images = get_field('gallery')):
+        if (function_exists('get_field') && have_rows('galleries')):
+            while (have_rows('galleries')):
+                the_row();
     ?>
-        <ul class="gallery">
-        <?php
-            foreach ($images as $image):
-        ?>
-            <li><a title="<?php echo $image['caption']; ?>" rel="gallery" href="<?php echo $image['url']; ?>" class="hvr-grow fancybox"><img src="<?php echo $image['sizes']['thumbnail']; ?>" /></a></li>
-        <?php
-            endforeach;
-        ?>
-        </ul>
+        <div class="gallery-container">
+            <?php
+                if (get_sub_field('description')):
+            ?>
+            <div class="gallery-description">
+                <?php the_sub_field('description'); ?>
+            </div>
+            <?php
+                endif;
+                if ($images = get_sub_field('photos')):
+            ?>
+            <ul class="gallery">
+            <?php
+                foreach ($images as $image):
+            ?>
+                <li><a title="<?php echo $image['caption']; ?>" rel="gallery" href="<?php echo $image['url']; ?>" class="hvr-grow fancybox"><img src="<?php echo $image['sizes']['thumbnail']; ?>" /></a></li>
+            <?php
+                endforeach;
+            ?>
+            </ul>
     <?php
+        endif;
+    ?>
+        </div>
+    <?php
+        endwhile;
         endif;
     ?>
     </div>
