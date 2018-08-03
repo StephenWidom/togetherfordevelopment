@@ -247,7 +247,7 @@ header {
 
 .logo {
     float: left;
-    padding-top: 7px;
+    margin: 0 0 -4px
 }
 
 .logo img {
